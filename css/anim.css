@@ -1,0 +1,107 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      
+    }
+}
+
+@keyframes fadopacity {
+    0% {
+      opacity: 1;
+      transform: translateY(5px);
+    }
+    25% {
+      opacity: 1;
+      transform: translateY(0px);
+      
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(5px);
+    }
+
+    
+
+}
+
+@keyframes rightfado {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      
+    }
+}
+
+@keyframes leftfado {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    
+  }
+}
+
+@keyframes lleftfado {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    
+  }
+}
+
+
+
+
+.home-text h1,.home-text span,.home-text p{
+    animation: fadeIn 2s ease-in-out;
+}
+
+.btn {
+    animation-name: fadopacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+} 
+
+.row.active {
+    animation: lleftfado 3s ease-in-out;
+} 
+
+.row.activee {
+  animation: leftfado 3s ease-in-out;
+} 
+
+.featured.active{
+  animation: rightfado 2s ease-in-out;
+}
+
+.sol.active{
+  animation: leftfado 1s ease-in-out;
+}
+
+.sol.active1{
+  animation: leftfado 2s ease-in-out;
+}
+
+.sol.active2{
+  animation: leftfado 3s ease-in-out;
+}
+
+
