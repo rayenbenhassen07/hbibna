@@ -14,10 +14,12 @@ $nom = $_POST['nom'];
 $email = $_POST['email'];
 $tel = $_POST['tel'];
 $message = $_POST['message'];
+$product = $_POST['product'];
+$prixx = $_POST['prixx'];
 
 if (isset($_POST['submit'])){
     //echo $prenom . ' '.$nom.' '.$email.' '.$tel;
-    $sql="INSERT INTO Commande(prenom,nom,email,tell,adresse) VALUES('$prenom','$nom','$email','$tel','$message')";
+    $sql="INSERT INTO Commande(prenom,nom,email,tell,adresse,product,prixx) VALUES('$prenom','$nom','$email','$tel','$message','$product','$prixx')";
     mysqli_query($con,$sql);
 }
 
@@ -33,7 +35,6 @@ if (isset($_POST['submit'])){
     <meta name="discription" content="Achat et vente en ligne de t-shirts pour homme sur le site hbibna.">
     <meta name="keywords"    content="hbibna.com,hbibna,habibna,tunisia,shop,store,hbibna shop">
     <link rel="icon" href="../img/logosolo2.png">
-    
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;500;600;700&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
     
@@ -62,11 +63,85 @@ if (isset($_POST['submit'])){
         </div>
     </header>
 
-    <section class="feli">
+    <!--------------------------confirmer------------------------------>
+    <section class="feliall">
+        <div class="feli">
+            <div class="confirmer-img"><img src="../img/Confirmed.png"  alt=""></div>
+            <div class="confirmer-text">Merci pour votre achat , <br><br>Commande a été bien <span>confirmer</span></div>
+        </div>
 
+        <div class="shop-title">
+            <h1>Vous pourriez aussi aimer</h>
+        </div>
 
-    
+        <div class="featured-contient">  
+            <div class="box">
+                <a href="../products/product1.html">
+                <img src="../img/koujina/product1/homme.jpg" alt="">
+                <!--<div class="mark">addidas</div>-->
+                <h5 class="titlee-product">Rechaud a gaz</h5>  
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <h6 class="product-pricee">49dt</h6>
+                <div class="stock">en stock</div>
+                
+                <div class="shopping-btn">
+                        <a ><i class='bx bx-shopping-bag add-cart'></i></a>
+                </div></a>
+                <!--<button class="acheter-btn">Plus de détails</button>-->
+            </div>
+        
+            
+            <div class="box">
+                <a href="../products/product2.html">
+                <img src="../img/koujina/product2/homme.jpg" alt="">
+                <!--<div class="mark">addidas</div>-->
+                <h5 class="titlee-product">Electric Lunch Box</h5>  
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <h6 class="product-pricee">44dt</h6>
+                <div class="stock">en stock</div>
+        
+                <div class="shopping-btn">
+                        <a><i class='bx bx-shopping-bag add-cart'></i></a>
+                </div></a>
+                <!--<button class="acheter-btn">Plus de détails</button>-->
+            </div>
+
+        
+            
+        </div>
+
     </section>
+
+
+    <!----------------------------Cart---------------------------->
+    <div class="cart">
+        <h3 class="cart-title">Your Cart</h3>
+        <div class="cart-content">
+
+        </div>
+        <div class="total">
+            <div class="total-title">Total :</div>
+            
+            <div class="total-price">0dt</div>
+        </div>
+
+        <a href="formulaire.html"><button type="buttom" class="btn-buy" >Acheter Maintenant</button></a>
+
+        <i class='bx bx-x' id="close-cart"></i>
+        
+    </div>
 
 
 
@@ -76,8 +151,8 @@ if (isset($_POST['submit'])){
     <!--------------------------Contact------------------------------>
     <section class="contact" id="contact">
         <div class="main-contact">
-            <h5>Shop24</h5>
-            <h6>Let's Connect With Us</h6>
+            <h5>Hbibna.com</h5>
+            <h6>Social Media</h6>
             <div class="icons">
                 <ul type="none">
                     <a href="https://www.facebook.com/rayen.benhassen.54/" target="_blank"><i class='bx bxl-facebook-square'></i></a>
@@ -90,54 +165,61 @@ if (isset($_POST['submit'])){
         </div>
 
         <div class="main-contact">
-            <h5>Explore</h5>
+            <h5>Contactez-nous</h5>
             <ul type="none">
-                <li><a href="#home" class="alli">Homme</a></li>
-                <li><a href="featured">featured</a></li>
-                <li><a href="new">New</a></li>
-                <li><a href="contact">Contact</a></li>
+                <li><a href="../page-information/contacter-nous.html" class="alli">Contactez nous</a></li>
+                <li><a href="../page-information/aide-et-faq.html">Aide & FAQ</a></li>
+                
             </ul>
         </div>
 
         <div class="main-contact">
-            <h5>Our services</h5>
+            <h5>Termes et politiques</h5>
             <ul type="none">
-                <li><a href="#home">Pricing</a></li>
-                <li><a href="featured">Free Shipping</a></li>
-                <li><a href="new">Gift Carts</a></li>
+                <li><a href="../page-information/conditions-utilisateur.html">Conditions d'utilisation</a></li>
+                <li><a href="../page-information/retours-echanges.html">Retours & échanges</a></li>
+                <li><a href="../page-information/politique-de-confidentialite.html">Politique de Confidentialité</a></li>
             </ul>
         </div>
-        
+
         <div class="main-contact">
-            <h5>Shopping</h5>
+            <h5>A propos du magasin</h5>
             <ul type="none"> 
-                <li><a href="home" class="alli">Clothing Store</a></li>
-                <li><a href="featured" class="alli">Trending Shoes</a></li>
-                <li><a href="new" class="alli">Accessories</a></li>
-                <li><a href="new" class="alli">Sale</a></li>
+                <li><a href="../page-information/a-propos.html" class="alli">À propos</a></li>
+                <li><a href="../page-information/methode-payement.html" class="alli">Méthodes de payement</a></li>
+                <li><a href="../page-information/expedition-manutention.html" class="alli">Expedition et manutention</a></li>
             </ul>
         </div>
 
     </section>
-    <div class="last-text">
-        <p>Copyright @ 2023 All rights reserved | this template is made with by rayen ben hassen</p>
 
+    <div class="last-text">
+        
+        <p>Copyright © 2023 hbibna.com All rights reserved | this template is made with by rayen ben hassen</p>
+    </div>
 
     
 
         <script src="../js/script.js"></script>
         <script src="../js/add-to-cart.js"></script>
         <link rel="stylesheet" href="css/style.css">
-        
-        <link rel="stylesheet" href="css/formul.css">
+        <link rel="stylesheet" href="css/shop.css">
 
-        <script>
-            const loader = document.querySelector('.loader');
-        
-            window.addEventListener("load", function(){
-                loader.style.display="none";
-            })
-        </script>
+        <?php
+            echo '<script>';
+            echo 'localStorage.clear();';
+
+            echo 'const loader = document.querySelector(\'.loader\');';
+
+            echo 'window.addEventListener("load", function() {';
+            echo 'loader.style.display = "none";';
+            echo '});';
+
+            echo '</script>';
+        ?>
+    
+            
+      
         
         
 
