@@ -30,6 +30,7 @@
 
         <div class="header-icons">
             <a><i class='bx bx-shopping-bag' id="shopping-bag"></i></a>
+            <div class="nbproduct"><h2>10</h2></div>
             <div class="menu-icons" >
                 <a href="#"><i class='bx bx-menu' id="menu-icons"></i></i></a>
             </div>
@@ -42,11 +43,20 @@
             <div class="cart-content">
     
             </div>
-            <div class="total">
-                <div class="total-title">Total :</div>
-                
-                <div class="total-price">0dt</div>
+            <div class="prixto">
+                <div class="total">
+                    <div class="total-title">Prix :</div>
+                    
+                    <div class="total-price">0dt</div>
+                    
+                </div>
+                <div class="liv">livraison :<span>0dt</span></div>
+                <div class="livtotall">
+                    <div class="plusliv">Total : </div>
+                    <div class="pluslivto"> 0dt</div>
+                </div>
             </div>
+            
     
             
     
@@ -62,10 +72,12 @@
             <h3>Informations Client</h3>
             <input type="text" name="prenom" id="prenom" placeholder="Prénom" required >
             <input type="text" name="nom" id="nom" placeholder="Nom" required >
-            <input type="test" name="email" id="email" placeholder="Email" required >
+            <input type="test" name="email" id="email" placeholder="Email" >
             <input type="tel" name="tel" id="tel" placeholder="Téléphone" required>
             <textarea name="message" id="message"  rows="4" placeholder="Adresse : (Djerba/houmet-souk...)"></textarea>
-            <button type="submit" name="submit" id="submit" >Enregistrer </button>
+            <textarea name="product" class="inputpro" id="product"  rows="4" placeholder="Adresse "></textarea>
+            <textarea name="prixx" class="prixx" id="prixx"  rows="4" placeholder="Adresse "></textarea>
+            <button type="submit" name="submit" id="submit">Confirmer</button>
         </form>
         
     </section>
@@ -74,14 +86,14 @@
 
 
 
-
+    
 
 
     <!--------------------------Contact------------------------------>
     <section class="contact" id="contact">
         <div class="main-contact">
-            <h5>Shop24</h5>
-            <h6>Let's Connect With Us</h6>
+            <h5>Hbibna.com</h5>
+            <h6>Social Media</h6>
             <div class="icons">
                 <ul type="none">
                     <a href="https://www.facebook.com/rayen.benhassen.54/" target="_blank"><i class='bx bxl-facebook-square'></i></a>
@@ -94,48 +106,51 @@
         </div>
 
         <div class="main-contact">
-            <h5>Explore</h5>
+            <h5>Contactez-nous</h5>
             <ul type="none">
-                <li><a href="#home" class="alli">Homme</a></li>
-                <li><a href="featured">featured</a></li>
-                <li><a href="new">New</a></li>
-                <li><a href="contact">Contact</a></li>
+                <li><a href="../page-information/contacter-nous.html" class="alli">Contactez nous</a></li>
+                <li><a href="../page-information/aide-et-faq.html">Aide & FAQ</a></li>
+                
             </ul>
         </div>
 
         <div class="main-contact">
-            <h5>Our services</h5>
+            <h5>Termes et politiques</h5>
             <ul type="none">
-                <li><a href="#home">Pricing</a></li>
-                <li><a href="featured">Free Shipping</a></li>
-                <li><a href="new">Gift Carts</a></li>
+                <li><a href="../page-information/conditions-utilisateur.html">Conditions d'utilisation</a></li>
+                <li><a href="../page-information/retours-echanges.html">Retours & échanges</a></li>
+                <li><a href="../page-information/politique-de-confidentialite.html">Politique de Confidentialité</a></li>
             </ul>
         </div>
-        
+
         <div class="main-contact">
-            <h5>Shopping</h5>
+            <h5>A propos du magasin</h5>
             <ul type="none"> 
-                <li><a href="home" class="alli">Clothing Store</a></li>
-                <li><a href="featured" class="alli">Trending Shoes</a></li>
-                <li><a href="new" class="alli">Accessories</a></li>
-                <li><a href="new" class="alli">Sale</a></li>
+                <li><a href="../page-information/a-propos.html" class="alli">À propos</a></li>
+                <li><a href="../page-information/methode-payement.html" class="alli">Méthodes de payement</a></li>
+                <li><a href="../page-information/expedition-manutention.html" class="alli">Expedition et manutention</a></li>
             </ul>
         </div>
 
     </section>
-    <div class="last-text">
-        <p>Copyright @ 2023 All rights reserved | this template is made with by rayen ben hassen</p>
 
+    
+    <div class="last-text">
+        <p>Copyright © 2023 hbibna.com All rights reserved | this template is made with by rayen ben hassen</p>
+    </div>
 
     
 
         <script src="../js/script.js"></script>
         <script src="../js/add-to-cart.js"></script>
         <link rel="stylesheet" href="css/style.css">
+        <script src="../js/form.js"></script>
         
         <link rel="stylesheet" href="css/formul.css">
 
         <script>
+
+            
             const loader = document.querySelector('.loader');
         
             window.addEventListener("load", function(){

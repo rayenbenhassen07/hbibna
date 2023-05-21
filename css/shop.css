@@ -16,11 +16,7 @@
 }
 
 
-.contient_body{
-    background-color:rgb(255, 255, 255);
-    display: flex;
-    
-}
+
 
 .contient_body .janoubi{
     display: flex;
@@ -32,8 +28,9 @@
     padding-top: 10px;
     padding-right: 20px;
     background-color: rgba(60, 62, 65, 0.432) ;
-    display: none;
+    
     margin-top: 20%;
+    display: none;
 }
 
 .contient_body .janoubi ul li a{
@@ -74,52 +71,46 @@ h3{
     padding-bottom: 15px;
 }
 
-
+.all-shop{
+    width: 100%;
+    background:linear-gradient(to bottom, rgb(255, 255, 255), rgb(237, 202, 231));
+}
 
 .search_all{
-    padding-top: 10%;
+    padding-top: 5%;
     padding-bottom: 5%;
     display: flex;
     justify-content: center;
-    position: relative;
+
+    width: 100%;
+    
     
 }
 
-
-
-
-.search_all input{
-    width: 600px;
-    height: 55px;
-    padding-left: 20px;
-    border-top-left-radius:20px ;
-    border-bottom-left-radius:20px ;
-    border: solid 2px;
-    background-color: var(--bgcolor-);
-    border-color: black;
-    border-right-color: transparent;
+.sea{
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
+.sea .search-saisie{
+    width: 700px;
+}
 
+.sea input{
+    padding-left: 30px;
+}
 
 .search_all button{
-    position: absolute;
     width: 100px;
     height: 55px;
-    background: linear-gradient(var(--bgcolor-9),var(--bgcolor-13));
+    background-color:var(--bgcolor-10);
     cursor: pointer;
-  
+    color: white;
     font-size: 15px;
     border-left-color: transparent;
     font-weight: 600;
-
-    
-    
-    
-    
-    
-    
-    
+  
 }
 
 .search_all button:hover{
@@ -142,12 +133,9 @@ h3{
     padding: 20px;
     background-color: rgb(255, 255, 255);
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-
     transition: 0.3s;
     z-index: 3000;
-    overflow-y: scroll;
-    
-    
+    overflow-y: scroll; 
 }
 
 .cart::-webkit-scrollbar{
@@ -212,7 +200,7 @@ h3{
 .cart-price{ 
     font-size: 15px;
     font-weight: 800;
-    color: var(--bgcolor-10);
+    color: var(--bgcolor-9);
 }
 
 .cart-quantity{
@@ -222,12 +210,16 @@ h3{
     width: 2.4rem;
     text-align: center;
     font-size: 1rem;
+    display: none;
+}
+.prix-party-ojo{
+    display: flex;
 }
 
 .cart-remove{
     font-size: 24px;
     cursor: pointer;
-    color: var(--bgcolor-9);
+    color: rgba(255, 0, 0, 0.588);
 }
 
 .cart-remove:hover{
@@ -307,25 +299,24 @@ h3{
     }
 
     .search_all{
-        padding-top: 30%;
+        padding-top: 20%; 
     }
     
-    .search_all input{
-        width: 200px;
+    .sea input{
+        padding-left:25px;
         height: 30px;
-        
-    
     }
     
     .search_all button{
-        position: absolute;
-        width: 70px;
         height: 30px;
-        right: 23%;
+        padding: 10px;
+        font-size: 10px;
+      
+    }
+    .all-shop{
         
         
     }
-
   
     
 

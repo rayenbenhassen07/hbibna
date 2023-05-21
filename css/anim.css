@@ -80,6 +80,13 @@
     
 } 
 
+.btn-cart{
+  animation-name: fadopacity;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  
+} 
+
 .row.active {
     animation: lleftfado 3s ease-in-out;
 } 
@@ -88,9 +95,7 @@
   animation: leftfado 3s ease-in-out;
 } 
 
-.featured.active{
-  animation: rightfado 2s ease-in-out;
-}
+
 
 .sol.active{
   animation: leftfado 1s ease-in-out;
